@@ -730,7 +730,7 @@ seturiparameters(Client *c, const char *uri, ParamName *params)
 void
 setparameter(Client *c, int refresh, ParamName p, const Arg *a)
 {
-	GdkRGBA bgcolor = { 0 };
+	GdkRGBA bgcolor = { 255,255,255 };
 	WebKitSettings *s = webkit_web_view_get_settings(c->view);
 
 	modparams[p] = curconfig[p].prio;
@@ -1365,7 +1365,7 @@ winevent(GtkWidget *w, GdkEvent *e, Client *c)
 void
 showview(WebKitWebView *v, Client *c)
 {
-	GdkRGBA bgcolor = { 0 };
+	GdkRGBA bgcolor = { 255,255,255 };
 	GdkWindow *gwin;
 
 	c->finder = webkit_web_view_get_find_controller(c->view);
